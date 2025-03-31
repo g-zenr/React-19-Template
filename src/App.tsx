@@ -6,6 +6,7 @@ import ResponsiveCardPage from './pages/examples/ResponsiveCardPage';
 import TailwindApplyExample from './components/examples/TailwindApplyExample';
 import VulcanThemePage from './pages/examples/VulcanThemePage';
 import { useTheme } from './context/ThemeContext';
+import UIComponentsDoc from './pages/docs/UIComponentsDoc';
 
 function Home() {
   const { isDarkMode, toggleDarkMode } = useTheme();
@@ -386,17 +387,16 @@ function About() {
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/responsive" element={<ResponsiveLayout />} />
-        <Route path="/responsive-cards" element={<ResponsiveCardPage />} />
-        <Route path="/tailwind-apply" element={<TailwindApplyExample />} />
-        <Route path="/vulcan-theme" element={<VulcanThemePage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/responsive" element={<ResponsiveLayout />} />
+      <Route path="/responsive-cards" element={<ResponsiveCardPage />} />
+      <Route path="/tailwind-apply" element={<TailwindApplyExample />} />
+      <Route path="/vulcan-theme" element={<VulcanThemePage />} />
+      <Route path="/components" element={<UIComponentsDoc />} />
+    </Routes>
   );
 }
 
