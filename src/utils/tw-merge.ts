@@ -10,11 +10,7 @@
  */
 export function twMerge(...classes: (string | undefined | null | false)[]): string {
   // Filter out falsy values
-  return classes
-    .filter(Boolean)
-    .join(' ')
-    .trim()
-    .replace(/\s+/g, ' '); // Replace multiple spaces with a single space
+  return classes.filter(Boolean).join(' ').trim().replace(/\s+/g, ' '); // Replace multiple spaces with a single space
 }
 
 /**
@@ -34,7 +30,9 @@ export function twCond(classMap: Record<string, boolean>): string {
  * @param {...(string | undefined | null | false | Record<string, boolean>)} args - Classes or condition maps
  * @returns {string} - The combined class string
  */
-export function tw(...args: (string | undefined | null | false | Record<string, boolean>)[]): string {
+export function tw(
+  ...args: (string | undefined | null | false | Record<string, boolean>)[]
+): string {
   const processedArgs = args.map(arg => {
     if (arg && typeof arg === 'object') {
       return twCond(arg as Record<string, boolean>);
@@ -43,4 +41,4 @@ export function tw(...args: (string | undefined | null | false | Record<string, 
   });
 
   return twMerge(...(processedArgs as (string | undefined | null | false)[]));
-} 
+}

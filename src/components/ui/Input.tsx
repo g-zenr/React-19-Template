@@ -54,25 +54,21 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     // Base classes for the input
-    const baseClasses = 'block px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-avocado-500)] sm:text-sm';
+    const baseClasses =
+      'block px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-avocado-500)] sm:text-sm';
 
     // Additional classes based on the input state
     const stateClasses = error
       ? 'border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500'
       : isSuccess
-      ? 'border-green-300 text-green-900 placeholder-green-400 focus:border-green-500 focus:ring-green-500'
-      : 'border-gray-300 placeholder-gray-400 focus:border-[var(--color-avocado-500)]';
+        ? 'border-green-300 text-green-900 placeholder-green-400 focus:border-green-500 focus:ring-green-500'
+        : 'border-gray-300 placeholder-gray-400 focus:border-[var(--color-avocado-500)]';
 
     // Width classes
     const widthClasses = fullWidth ? 'w-full' : '';
 
     // Combine all classes
-    const inputClasses = tw(
-      baseClasses,
-      stateClasses,
-      widthClasses,
-      className
-    );
+    const inputClasses = tw(baseClasses, stateClasses, widthClasses, className);
 
     return (
       <div className={tw('mb-4', containerClassName)}>
@@ -84,7 +80,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             {label}
           </label>
         )}
-        
+
         <input
           ref={ref}
           type={type}
@@ -95,16 +91,13 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           }
           {...props}
         />
-        
+
         {error && (
-          <p
-            id={`${props.id}-error`}
-            className="mt-1 text-sm text-red-600"
-          >
+          <p id={`${props.id}-error`} className="mt-1 text-sm text-red-600">
             {error}
           </p>
         )}
-        
+
         {helperText && !error && (
           <p
             id={`${props.id}-description`}
@@ -118,4 +111,4 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-Input.displayName = 'Input'; 
+Input.displayName = 'Input';

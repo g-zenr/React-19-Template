@@ -50,7 +50,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     // Base classes for all buttons
-    const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-avocado-500)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+    const baseClasses =
+      'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-avocado-500)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
 
     // Classes for different variants
     const variantClasses = {
@@ -83,12 +84,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     return (
-      <button
-        ref={ref}
-        className={buttonClasses}
-        disabled={disabled || isLoading}
-        {...props}
-      >
+      <button ref={ref} className={buttonClasses} disabled={disabled || isLoading} {...props}>
         {isLoading ? (
           <>
             <svg
@@ -125,4 +121,4 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = 'Button'; 
+Button.displayName = 'Button';

@@ -28,24 +28,18 @@ interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 // Components
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={tw('rounded-lg border border-gray-200 bg-white shadow-sm', className)}
-      {...props}
-    />
-  )
-);
+export const Card = React.forwardRef<HTMLDivElement, CardProps>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={tw('rounded-lg border border-gray-200 bg-white shadow-sm', className)}
+    {...props}
+  />
+));
 Card.displayName = 'Card';
 
 export const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
   ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={tw('flex flex-col space-y-1.5 p-6', className)}
-      {...props}
-    />
+    <div ref={ref} className={tw('flex flex-col space-y-1.5 p-6', className)} {...props} />
   )
 );
 CardHeader.displayName = 'CardHeader';
@@ -63,33 +57,21 @@ CardTitle.displayName = 'CardTitle';
 
 export const CardDescription = React.forwardRef<HTMLParagraphElement, CardDescriptionProps>(
   ({ className, ...props }, ref) => (
-    <p
-      ref={ref}
-      className={tw('text-sm text-gray-500', className)}
-      {...props}
-    />
+    <p ref={ref} className={tw('text-sm text-gray-500', className)} {...props} />
   )
 );
 CardDescription.displayName = 'CardDescription';
 
 export const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
   ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={tw('p-6 pt-0', className)}
-      {...props}
-    />
+    <div ref={ref} className={tw('p-6 pt-0', className)} {...props} />
   )
 );
 CardContent.displayName = 'CardContent';
 
 export const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(
   ({ className, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={tw('flex items-center p-6 pt-0', className)}
-      {...props}
-    />
+    <div ref={ref} className={tw('flex items-center p-6 pt-0', className)} {...props} />
   )
 );
-CardFooter.displayName = 'CardFooter'; 
+CardFooter.displayName = 'CardFooter';

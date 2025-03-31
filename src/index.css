@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'tailwindcss';
 
 @theme {
-  --font-inter: "Inter", sans-serif; 
+  --font-inter: 'Inter', sans-serif;
   --breakpoint-3xl: 1920px;
-  
+
   /* Vulcan Color Palette */
   --color-vulcan-50: #f5f7fa;
   --color-vulcan-100: #e4e7eb;
@@ -17,7 +17,7 @@
   --color-vulcan-800: #323f4b;
   --color-vulcan-900: #1f2933;
   --color-vulcan-950: oklch(0.181 0.03 267.69);
-  
+
   /* Animation timing */
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
@@ -88,7 +88,7 @@
   .card-with-padding {
     @apply bg-[var(--color-vulcan-50)] rounded-lg shadow-md overflow-hidden p-4 sm:p-6 border border-[var(--color-vulcan-200)];
   }
-  
+
   /* Dark theme cards */
   .card-dark {
     @apply bg-[var(--color-vulcan-900)] text-[var(--color-vulcan-100)] rounded-lg shadow-md overflow-hidden;
@@ -210,7 +210,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -345,12 +345,12 @@ body {
 }
 
 /* Font Sizes */
-[contenteditable] [style*="font-size"] {
+[contenteditable] [style*='font-size'] {
   line-height: 1.75;
 }
 
 /* Color Inputs */
-input[type="color"] {
+input[type='color'] {
   -webkit-appearance: none;
   padding: 0;
   border: none;
@@ -360,11 +360,11 @@ input[type="color"] {
   cursor: pointer;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
+input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-input[type="color"]::-webkit-color-swatch {
+input[type='color']::-webkit-color-swatch {
   border: none;
   border-radius: 4px;
 }
@@ -465,7 +465,7 @@ input[type="color"]::-webkit-color-swatch {
   --color-vulcan-700: #cbd2d9;
   --color-vulcan-800: #e4e7eb;
   --color-vulcan-900: #f5f7fa;
-  
+
   /* Override base styles for dark mode */
   background-color: var(--color-vulcan-50); /* This will be dark now */
   color: var(--color-vulcan-200);
@@ -549,13 +549,13 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--color-vulcan-100);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'tailwindcss';
 
 @theme {
-  --font-inter: "Inter", sans-serif; 
+  --font-inter: 'Inter', sans-serif;
   --breakpoint-3xl: 1920px;
-  
+
   /* Vulcan Color Palette */
   --color-vulcan-50: #f5f7fa;
   --color-vulcan-100: #e4e7eb;
@@ -568,7 +568,7 @@ input[type="color"]::-webkit-color-swatch {
   --color-vulcan-800: #323f4b;
   --color-vulcan-900: #1f2933;
   --color-vulcan-950: oklch(0.181 0.03 267.69);
-  
+
   /* Animation timing */
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
@@ -639,7 +639,7 @@ input[type="color"]::-webkit-color-swatch {
   .card-with-padding {
     @apply bg-[var(--color-vulcan-50)] rounded-lg shadow-md overflow-hidden p-4 sm:p-6 border border-[var(--color-vulcan-200)];
   }
-  
+
   /* Dark theme cards */
   .card-dark {
     @apply bg-[var(--color-vulcan-900)] text-[var(--color-vulcan-100)] rounded-lg shadow-md overflow-hidden;
@@ -761,7 +761,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -896,12 +896,12 @@ body {
 }
 
 /* Font Sizes */
-[contenteditable] [style*="font-size"] {
+[contenteditable] [style*='font-size'] {
   line-height: 1.75;
 }
 
 /* Color Inputs */
-input[type="color"] {
+input[type='color'] {
   -webkit-appearance: none;
   padding: 0;
   border: none;
@@ -911,11 +911,11 @@ input[type="color"] {
   cursor: pointer;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
+input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-input[type="color"]::-webkit-color-swatch {
+input[type='color']::-webkit-color-swatch {
   border: none;
   border-radius: 4px;
 }

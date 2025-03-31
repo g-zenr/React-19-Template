@@ -12,7 +12,7 @@ export function useMediaQuery(query: string): boolean {
   useEffect(() => {
     // Create media query list
     const mediaQuery = window.matchMedia(query);
-    
+
     // Set initial value
     setMatches(mediaQuery.matches);
 
@@ -23,7 +23,7 @@ export function useMediaQuery(query: string): boolean {
 
     // Add event listener for changes
     mediaQuery.addEventListener('change', handleResize);
-    
+
     // Clean up
     return () => {
       mediaQuery.removeEventListener('change', handleResize);
@@ -51,4 +51,4 @@ export const breakpoints = {
  */
 export function useBreakpoint(breakpoint: keyof typeof breakpoints): boolean {
   return useMediaQuery(breakpoints[breakpoint]);
-} 
+}

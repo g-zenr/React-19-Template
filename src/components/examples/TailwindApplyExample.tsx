@@ -4,21 +4,21 @@ const TailwindApplyExample: React.FC = () => {
   return (
     <div className="section responsive-container">
       <h1 className="heading-1 mb-6">Tailwind CSS @apply Example</h1>
-      
+
       <div className="grid-cols-2 responsive-gap mb-8">
         <div className="card card-hover responsive-padding">
           <h2 className="heading-3 mb-4">Using CSS Utility Classes</h2>
           <p className="paragraph mb-4">
-            This component uses utility classes defined with Tailwind's @apply directive
-            in our index.css file. This approach keeps styling in CSS while leveraging
-            Tailwind's utility-first methodology.
+            This component uses utility classes defined with Tailwind's @apply directive in our
+            index.css file. This approach keeps styling in CSS while leveraging Tailwind's
+            utility-first methodology.
           </p>
           <div className="flex-between">
             <button className="btn-primary">Primary Action</button>
             <button className="btn-outline">Secondary Action</button>
           </div>
         </div>
-        
+
         <div className="card-with-padding">
           <h2 className="heading-3 mb-4">Responsive Examples</h2>
           <div className="stack-to-row responsive-gap">
@@ -39,28 +39,34 @@ const TailwindApplyExample: React.FC = () => {
                 </span>
               </div>
               <p className="paragraph mt-4">
-                Using classes like <code>.stack-to-row</code> helps create layouts
-                that adapt to different screen sizes.
+                Using classes like <code>.stack-to-row</code> helps create layouts that adapt to
+                different screen sizes.
               </p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className="flex-col-center">
         <div className="card responsive-padding w-full max-w-lg">
           <h2 className="heading-2 mb-4">Form Example</h2>
           <form>
             <div className="form-group">
-              <label htmlFor="name" className="label">Name</label>
+              <label htmlFor="name" className="label">
+                Name
+              </label>
               <input type="text" id="name" className="input" placeholder="Enter your name" />
             </div>
             <div className="form-group">
-              <label htmlFor="email" className="label">Email</label>
+              <label htmlFor="email" className="label">
+                Email
+              </label>
               <input type="email" id="email" className="input" placeholder="Enter your email" />
             </div>
             <div className="flex-end">
-              <button type="submit" className="btn-primary">Submit</button>
+              <button type="submit" className="btn-primary">
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -69,4 +75,4 @@ const TailwindApplyExample: React.FC = () => {
   );
 };
 
-export default TailwindApplyExample; 
+export default TailwindApplyExample;

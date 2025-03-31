@@ -59,12 +59,12 @@ const useAccordionItem = () => {
 };
 
 // Component: Accordion
-export const Accordion = ({ 
-  type = 'single', 
-  defaultValue = [], 
-  collapsible = false, 
-  children, 
-  className 
+export const Accordion = ({
+  type = 'single',
+  defaultValue = [],
+  collapsible = false,
+  children,
+  className,
 }: AccordionProps) => {
   // Initialize open items state based on defaultValue
   const [openItems, setOpenItems] = useState<string[]>(
@@ -97,9 +97,7 @@ export const Accordion = ({
 
   return (
     <AccordionContext.Provider value={contextValue}>
-      <div className={tw('divide-y divide-gray-200', className)}>
-        {children}
-      </div>
+      <div className={tw('divide-y divide-gray-200', className)}>{children}</div>
     </AccordionContext.Provider>
   );
 };
@@ -117,9 +115,7 @@ export const AccordionItem = ({ value, children, className }: AccordionItemProps
 
   return (
     <AccordionItemContext.Provider value={itemContextValue}>
-      <div className={tw('py-2', className)}>
-        {children}
-      </div>
+      <div className={tw('py-2', className)}>{children}</div>
     </AccordionItemContext.Provider>
   );
 };
@@ -160,9 +156,7 @@ export const AccordionContent = ({ children, className }: AccordionContentProps)
   const { isOpen } = useAccordionItem();
 
   // Animation classes
-  const animationClasses = isOpen
-    ? 'max-h-96 opacity-100'
-    : 'max-h-0 opacity-0 overflow-hidden';
+  const animationClasses = isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden';
 
   return (
     <div
@@ -175,4 +169,4 @@ export const AccordionContent = ({ children, className }: AccordionContentProps)
       <div className="py-2">{children}</div>
     </div>
   );
-}; 
+};

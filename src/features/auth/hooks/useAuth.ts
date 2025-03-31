@@ -33,10 +33,10 @@ export function useAuth(): UseAuthReturn {
       try {
         // Simulate API call to check authentication status
         setState(prev => ({ ...prev, isLoading: true }));
-        
+
         // Get user from localStorage (this is just a mock implementation)
         const storedUser = localStorage.getItem('auth_user');
-        
+
         if (storedUser) {
           const user = JSON.parse(storedUser);
           setState({
@@ -69,16 +69,16 @@ export function useAuth(): UseAuthReturn {
   const login = async (email: string, password: string) => {
     try {
       setState(prev => ({ ...prev, isLoading: true }));
-      
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock successful login
       const user = { id: '1', email, name: 'John Doe' };
-      
+
       // Store user in localStorage
       localStorage.setItem('auth_user', JSON.stringify(user));
-      
+
       setState({
         user,
         isAuthenticated: true,
@@ -97,16 +97,16 @@ export function useAuth(): UseAuthReturn {
   const register = async (email: string, password: string, name: string) => {
     try {
       setState(prev => ({ ...prev, isLoading: true }));
-      
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Mock successful registration
       const user = { id: '1', email, name };
-      
+
       // Store user in localStorage
       localStorage.setItem('auth_user', JSON.stringify(user));
-      
+
       setState({
         user,
         isAuthenticated: true,
@@ -125,10 +125,10 @@ export function useAuth(): UseAuthReturn {
   const logout = async () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 500));
-    
+
     // Remove user from localStorage
     localStorage.removeItem('auth_user');
-    
+
     setState({
       user: null,
       isAuthenticated: false,
@@ -143,4 +143,4 @@ export function useAuth(): UseAuthReturn {
     register,
     logout,
   };
-} 
+}
